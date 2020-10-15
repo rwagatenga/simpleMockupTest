@@ -120,49 +120,7 @@ export default function Produit() {
             <h4 className={classes.cardTitleWhite}>Produit </h4>
           </CardHeader>*/}
           <CardBody>
-          <FormControl className={classes.margin}>
-            <InputLabel id="demo-customized-select-label">Anne de Demarrage</InputLabel>
-            <Select
-              labelId="demo-customized-select-label"
-              id="demo-customized-select"
-              value={anne}
-              onChange={handleChange}
-              input={<BootstrapInput />}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Veuillez Selectioner</MenuItem>
-              <MenuItem value={20}>Veuillez Optioner</MenuItem>
-            </Select>
-          </FormControl><br/><br/>
-          <AppBar position="static" style={{backgroundColor: "#F3EEED", color: "#000000"}}>
-            <Toolbar variant="dense">
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <AddIcon />
-              </IconButton>
-              <Typography color="black" style={{color: "black"}}>
-                Ajouter
-              </Typography>
-              &nbsp;&nbsp;&nbsp;
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <PrintIcon />
-              </IconButton>
-              <Typography color="black" style={{color: "black"}}>
-                Imprimer
-              </Typography>
-              &nbsp;&nbsp;&nbsp;
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuBookIcon/>
-              </IconButton>
-              <Typography color="black" style={{color: "black"}}>
-                Excel
-              </Typography>
-            </Toolbar>
-          </AppBar><br/>
-            <ProduitTable
-              tableHeaderColor="success"
-            />
+          Hello World
           </CardBody>
         </Card>
       </GridItem>

@@ -1,17 +1,8 @@
 import React from "react";
-import { connect } from 'react-redux';
-// import * as actions from '../../store/actions/index';
-// react plugin for creating charts
-// import ChartistGraph from "react-chartist";
-// @material-ui/core
 import { makeStyles } from "@material-ui/core/styles";
-import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
-import Warning from "@material-ui/icons/Warning";
-import DateRange from "@material-ui/icons/DateRange";
-// core components
+import AccountBoxIcon from '@material-ui/icons/AccountBox';// core components
 import GridItem from "../../components/Grid/GridItem.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import Tasks from "../../components/Tasks/Tasks.js";

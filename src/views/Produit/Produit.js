@@ -3,7 +3,6 @@ import React from "react";
 import { makeStyles, withStyles  } from "@material-ui/core/styles";
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
-import Grid from '@material-ui/core/Grid';
 import GridContainer from "../../components/Grid/GridContainer.js";
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -19,7 +18,6 @@ import InputBase from '@material-ui/core/InputBase';
 import AddIcon from '@material-ui/icons/Add';
 
 import Card from "../../components/Card/Card.js";
-import CardHeader from "../../components/Card/CardHeader.js";
 import CardBody from "../../components/Card/CardBody.js";
 import ProduitTable from "../../components/Table/ProduitTable";
 

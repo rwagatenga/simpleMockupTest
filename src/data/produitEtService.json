@@ -1,0 +1,26 @@
+produit = [
+	{
+		projectActivities: [
+			{
+				pId: 1,
+				pName: MENUISERI
+			},
+			{
+				pId: 2,
+				pName: MENUISERI
+			},
+			{
+				pId: 3,
+				pName: COUTIRE
+			}
+		]
+	},
+	{
+		productServiceProposal: [
+			{
+				sId: 1,
+				
+			}
+		]
+	}
+]

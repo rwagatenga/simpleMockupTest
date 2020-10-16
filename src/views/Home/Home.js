@@ -1,25 +1,17 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import FormatAlignJustifyIcon from '@material-ui/icons/FormatAlignJustify';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';// core components
 import GridItem from "../../components/Grid/GridItem.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
-import Tasks from "../../components/Tasks/Tasks.js";
-import CustomTabs from "../../components/CustomTabs/CustomTabs.js";
-import Danger from "../../components/Typography/Danger.js";
 import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import CardIcon from "../../components/Card/CardIcon.js";
 import CardBody from "../../components/Card/CardBody.js";
 import CardFooter from "../../components/Card/CardFooter.js";
 
-import styles from "../../assets/jss/material-dashboard-react/views/dashboardStyle.js";
-
-const useStyles = makeStyles(styles);
 
  function Home(props) {
-  const classes = useStyles();
   return (
     <div>
       <GridContainer>

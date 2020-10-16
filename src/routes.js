@@ -1,4 +1,3 @@
-import React, {Component} from 'react';
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import ViewListIcon from '@material-ui/icons/ViewList';

@@ -4,7 +4,7 @@ import MaterialTable from 'material-table';
 export default function SubventionTable() {
   const { useState } = React;
 
-  const [columns, setColumns] = useState([
+  const columns = [
     { title: 'DATE', field: 'dates', type: 'date' },
     { 
       title: 'COMPTE DE FINANCEMENT', 
@@ -27,7 +27,7 @@ export default function SubventionTable() {
       }
     },
     { title: 'MONTANT', field: 'montan', type: 'textArea' },
-  ]);
+  ];
 
   const [data, setData] = useState([
     { dates: '2020-01-01', compte: 34, montan: '50,000.00', destination: 63 },

@@ -30,11 +30,9 @@ export default function Admin({ ...rest }) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
-  const [image, setImage] = React.useState(bgImage);
-  const [color, setColor] = React.useState("green");
-  const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  
+  const image = bgImage;
+  const color = "green";
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };

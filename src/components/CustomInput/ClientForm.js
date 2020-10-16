@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, withStyles, createMuiTheme } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';

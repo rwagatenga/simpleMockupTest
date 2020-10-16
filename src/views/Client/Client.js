@@ -1,14 +1,8 @@
 import React from "react";
 // @material-ui/core components
-import { makeStyles, withStyles  } from "@material-ui/core/styles";
+import { makeStyles  } from "@material-ui/core/styles";
 // core components
-import GridItem from "../../components/Grid/GridItem.js";
 import Grid from '@material-ui/core/Grid';
-import GridContainer from "../../components/Grid/GridContainer.js";
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/ToolBar";
 import IconButton from "@material-ui/core/IconButton"
@@ -16,13 +10,10 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PrintIcon from '@material-ui/icons/Print';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Typography from "@material-ui/core/Typography";
-import InputBase from '@material-ui/core/InputBase';
-import AddIcon from '@material-ui/icons/Add';
 
 import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import CardBody from "../../components/Card/CardBody.js";
-import ProduitTable from "../../components/Table/ProduitTable";
 import ClientTable from "components/Table/ClientTable.js";
 import ClientForm from "components/CustomInput/ClientForm.js";
 import TransactionTable from "components/Table/TransactionTable.js";
@@ -80,10 +71,6 @@ const useStyles = makeStyles(styles);
 
 export default function Produit() {
   const classes = useStyles();
-  const [anne, setAnne] = React.useState('');
-  const handleChange = (event) => {
-    setAnne(event.target.value);
-  };
 
   return ([
     <AppBar position="static" color= "black">

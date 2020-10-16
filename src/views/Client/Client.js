@@ -98,7 +98,11 @@ export default function Produit() {
       </Toolbar>
     </AppBar>,
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container spacing={2}
+        direction="row"
+        justify="flex-end"
+        alignItems="flex-end"
+      >
         <Grid item xs={12} sm={12} md={4}>
           <Card>
             <CardBody>

@@ -14,6 +14,7 @@ import Toolbar from "@material-ui/core/ToolBar";
 import IconButton from "@material-ui/core/IconButton"
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PrintIcon from '@material-ui/icons/Print';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Typography from "@material-ui/core/Typography";
 import InputBase from '@material-ui/core/InputBase';
 import AddIcon from '@material-ui/icons/Add';
@@ -22,9 +23,16 @@ import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import CardBody from "../../components/Card/CardBody.js";
 import ProduitTable from "../../components/Table/ProduitTable";
+import ClientTable from "components/Table/ClientTable.js";
+import ClientForm from "components/CustomInput/ClientForm.js";
+import TransactionTable from "components/Table/TransactionTable.js";
 
 
 const styles = {
+  root: {
+    flexGrow: 1,
+    justify: 'flex-end'
+  },
   formControl: {
     marginTop: '10px',
     minWidth: '20ch',
@@ -68,41 +76,6 @@ const styles = {
     }
   }
 };
-const BootstrapInput = withStyles((theme) => ({
-  root: {
-    'label + &': {
-      marginTop: theme.spacing(3),
-    },
-  },
-  input: {
-    borderRadius: 4,
-    position: 'relative',
-    backgroundColor: theme.palette.background.paper,
-    border: '1px solid #ced4da',
-    fontSize: 16,
-    padding: '10px 26px 10px 12px',
-    width: 250,
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    // Use the system font instead of the default Roboto font.
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:focus': {
-      borderRadius: 4,
-      borderColor: '#80bdff',
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-    },
-  },
-  }))(InputBase);
 const useStyles = makeStyles(styles);
 
 export default function Produit() {
@@ -112,18 +85,61 @@ export default function Produit() {
     setAnne(event.target.value);
   };
 
-  return (
-    <GridContainer>
-      <GridItem xs={12} sm={12} md={12}>
-        <Card>
-          {/*<CardHeader color="success">
-            <h4 className={classes.cardTitleWhite}>Produit </h4>
-          </CardHeader>*/}
-          <CardBody>
-          Hello World
-          </CardBody>
-        </Card>
-      </GridItem>
-    </GridContainer>
-  );
+  return ([
+    <AppBar position="static" color= "black">
+      <Toolbar variant="dense">
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <AccountBoxIcon />
+        </IconButton>
+        <Typography color="black" style={{color: "black"}}>
+          Nouveau
+        </Typography>
+        &nbsp;&nbsp;&nbsp;
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <PrintIcon />
+        </IconButton>
+        <Typography color="black" style={{color: "black"}}>
+          Imprimer
+        </Typography>
+        &nbsp;&nbsp;&nbsp;
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <MenuBookIcon/>
+        </IconButton>
+        <Typography color="black" style={{color: "black"}}>
+          Excel
+        </Typography>
+      </Toolbar>
+    </AppBar>,
+    <div className={classes.root}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={12} md={4}>
+          <Card>
+            <CardBody>
+              <ClientTable />
+            </CardBody>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={12} md={8}>
+          <Card>
+            <CardHeader color="success">
+              <h4 className={classes.cardTitleWhite}>Information du Client </h4>
+            </CardHeader>
+            <CardBody>
+              <ClientForm/>
+            </CardBody>
+          </Card>
+        </Grid>
+          <Grid item xs={12} sm={12} md={8}>
+            <Card>
+              <CardHeader color="success">
+                <h4 className={classes.cardTitleWhite}>Transactions recentes</h4>
+              </CardHeader>
+              <CardBody>
+                <TransactionTable/>
+              </CardBody>
+            </Card>
+          </Grid>
+      </Grid>
+    </div>
+  ]);
 }

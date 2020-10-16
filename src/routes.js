@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import ViewListIcon from '@material-ui/icons/ViewList';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 // core components/views for Admin layout
 import Home from "views/Home/Home.js";
 import Subvention from "views/Subvention/Subvention.js";
@@ -34,8 +35,8 @@ const dashboardRoutes = [
   {
     path: "/client",
     name: "ClIENT",
-    icon: ViewListIcon,
-    component: Produit,
+    icon: AccountBoxIcon,
+    component: Client,
     layout: "/admin"
   },
 ];

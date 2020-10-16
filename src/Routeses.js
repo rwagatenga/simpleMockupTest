@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import ViewListIcon from '@material-ui/icons/ViewList';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 // core components/views for Admin layout
 import Home from "views/Home/Home.js";
 import Subvention from "views/Subvention/Subvention.js";
@@ -39,8 +40,8 @@ class Routeses extends Component {
 		{
 		    path: "/client",
 		    name: "ClIENT",
-		    icon: ViewListIcon,
-		    component: Produit,
+		    icon: AccountBoxIcon,
+		    component: Client,
 		    layout: "/admin"
 		},
       ]
